@@ -1,0 +1,26 @@
+Create Products Table
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    brand VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(255),
+    description TEXT,
+    supplier_id INT
+);
+Insert Sample Data into Products
+INSERT INTO products (name, brand, price, category, description, supplier_id) VALUES
+('Laptop A', 'Brand X', 999.99, 'Laptops', 'A high-performance laptop.', 1),
+('Phone B', 'Brand Y', 699.99, 'Phones', 'A smartphone with great features.', 2);
+
+Create Suppliers Table
+CREATE TABLE suppliers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    contact_info TEXT,
+    product_categories TEXT
+);
+Insert Sample Data into Suppliers
+INSERT INTO suppliers (name, contact_info, product_categories) VALUES
+('Supplier 1', 'supplier1@example.com', 'Laptops, Tablets'),
+('Supplier 2', 'supplier2@example.com', 'Phones, Accessories');
